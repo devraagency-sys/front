@@ -7,6 +7,10 @@ import { motion } from "framer-motion";
 import { useTheme } from "./ThemeProvider";
 import { useTranslations, useLocale } from "next-intl";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+
 type Review = {
   id: number;
   projectLogo: string;
@@ -81,72 +85,85 @@ export const Reviews: React.FC = () => {
           {t("title")}
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={20}
+          loop={true}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          breakpoints={{
+            0: { slidesPerView: 1 }, // телефоны
+            768: { slidesPerView: 2 }, // планшеты
+            1280: { slidesPerView: 3 }, // десктопы
+          }}
+          className="!pb-12"
+        >
           {isLoading
             ? skeletonArray.map((_, i) => (
-                <div
-                  key={i}
-                  className={clsx(
-                    "p-6 rounded-2xl border shadow-sm flex flex-col items-center text-center h-full animate-pulse",
-                    theme === "dark"
-                      ? "bg-white/5 border-white/10"
-                      : "bg-white border-gray-200"
-                  )}
-                >
-                  <div className="w-16 h-16 rounded-full bg-gray-300 dark:bg-gray-700 mb-4" />
-                  <div className="h-4 w-2/3 bg-gray-300 dark:bg-gray-600 rounded mb-2" />
-                  <div className="h-3 w-1/2 bg-gray-200 dark:bg-gray-500 rounded mb-4" />
-                  <div className="h-3 w-full bg-gray-200 dark:bg-gray-500 rounded mb-1" />
-                  <div className="h-3 w-5/6 bg-gray-200 dark:bg-gray-500 rounded" />
-                </div>
+                <SwiperSlide key={i}>
+                  <div
+                    className={clsx(
+                      "p-6 rounded-2xl border shadow-sm flex flex-col items-center text-center h-full animate-pulse",
+                      theme === "dark"
+                        ? "bg-white/5 border-white/10"
+                        : "bg-white border-gray-200"
+                    )}
+                  >
+                    <div className="w-16 h-16 rounded-full bg-gray-300 dark:bg-gray-700 mb-4" />
+                    <div className="h-4 w-2/3 bg-gray-300 dark:bg-gray-600 rounded mb-2" />
+                    <div className="h-3 w-1/2 bg-gray-200 dark:bg-gray-500 rounded mb-4" />
+                    <div className="h-3 w-full bg-gray-200 dark:bg-gray-500 rounded mb-1" />
+                    <div className="h-3 w-5/6 bg-gray-200 dark:bg-gray-500 rounded" />
+                  </div>
+                </SwiperSlide>
               ))
             : reviews.map((review, index) => (
-                <motion.div
-                  key={review.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  className={clsx(
-                    "p-6 rounded-2xl border shadow-sm flex flex-col items-center text-center h-full transition-all",
-                    theme === "dark"
-                      ? "bg-gray-800 text-white border border-gray-700 hover:bg-gray-700"
-                      : "bg-white border-gray-200 hover:shadow-md"
-                  )}
-                >
-                  <img
-                    src={review.projectLogo}
-                    alt={getLocalized(review, "projectName")}
-                    className="w-16 h-16 rounded-full mb-4 object-cover"
-                  />
-                  <h3
+                <SwiperSlide key={review.id}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: index * 0.2 }}
                     className={clsx(
-                      "text-lg font-semibold mb-1",
-                      theme === "dark" ? "text-white" : "text-gray-900"
+                      "p-6 rounded-2xl border shadow-sm flex flex-col items-center text-center h-full transition-all",
+                      theme === "dark"
+                        ? "bg-gray-800 text-white border border-gray-700 hover:bg-gray-700"
+                        : "bg-white border-gray-200 hover:shadow-md"
                     )}
                   >
-                    {review.authorName}
-                  </h3>
-                  <p
-                    className={clsx(
-                      "text-sm mb-2",
-                      theme === "dark" ? "text-gray-400" : "text-gray-600"
-                    )}
-                  >
-                    {getLocalized(review, "authorRole")} @{" "}
-                    {getLocalized(review, "projectName")}
-                  </p>
-                  <p
-                    className={clsx(
-                      "text-sm leading-relaxed italic",
-                      theme === "dark" ? "text-gray-400" : "text-gray-600"
-                    )}
-                  >
-                    “{getLocalized(review, "text")}”
-                  </p>
-                </motion.div>
+                    <img
+                      src={review.projectLogo}
+                      alt={getLocalized(review, "projectName")}
+                      className="w-16 h-16 rounded-full mb-4 object-cover"
+                    />
+                    <h3
+                      className={clsx(
+                        "text-lg font-semibold mb-1",
+                        theme === "dark" ? "text-white" : "text-gray-900"
+                      )}
+                    >
+                      {review.authorName}
+                    </h3>
+                    <p
+                      className={clsx(
+                        "text-sm mb-2",
+                        theme === "dark" ? "text-gray-400" : "text-gray-600"
+                      )}
+                    >
+                      {getLocalized(review, "authorRole")} @{" "}
+                      {getLocalized(review, "projectName")}
+                    </p>
+                    <p
+                      className={clsx(
+                        "text-sm leading-relaxed italic",
+                        theme === "dark" ? "text-gray-400" : "text-gray-600"
+                      )}
+                    >
+                      “{getLocalized(review, "text")}”
+                    </p>
+                  </motion.div>
+                </SwiperSlide>
               ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );
