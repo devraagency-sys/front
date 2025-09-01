@@ -1,0 +1,169 @@
+{
+  "hero": {
+    "tagline": "ROI or DIE",
+    "titleLine1": "High-quality traffic",
+    "titleLine2": "from Telegram Ads without limits",
+    "button": "LEARN MORE ABOUT US",
+    "bottomText": "We don’t buy clicks. We take minds.",
+    "buttonFOC": "Write us",
+    "watermark": "RA AGENCY"
+  },
+  "reviews": {
+    "title": "Client Reviews",
+    "items": [
+      {
+        "name": "Olena K.",
+        "text": "RA Agency helped us launch a successful Telegram campaign that brought 150% sales growth!",
+        "rating": 5
+      },
+      {
+        "name": "Mykhailo P.",
+        "text": "Professional approach and clear analytics. Highly recommended for Telegram marketing.",
+        "rating": 4
+      },
+      {
+        "name": "Anna S.",
+        "text": "Thanks to RA Agency, we gained 10K new subscribers in one month!",
+        "rating": 5
+      }
+    ]
+  },
+  "cases": {
+    "title": "Our Cases",
+    "prev": "Previous",
+    "next": "Next",
+   "projects": [
+  {
+    "title": "Boinkers",
+    "budget": "Budget: 50,000$",
+    "users": "New user: 571,722",
+    "geo": "GEOs: All countries",
+    "cpi": "CPI: $0.087",
+    "img": "/photo_2025-07-28_22-58-58.jpg"
+  },
+  {
+    "title": "Uni Jump",
+    "budget": "Budget: 30,000$",
+    "users": "New user: 227,812",
+    "geo": "GEOs: CIS countries",
+    "cpi": "CPI: $0.13",
+    "img": "/photo_2025-07-28_22-58-59.jpg"
+  },
+  {
+    "title": "PokerGram",
+    "budget": "Budget: 20,000$",
+    "users": "New user: 180,000",
+    "geo": "GEOs: Mixed geos",
+    "cpi": "CPI: $0.11",
+    "img": "/photo_2025-07-28_22-59-00.jpg"
+  }
+]
+
+  },
+  "header": {
+    "about": "About",
+    "services": "Services",
+    "cases": "Cases",
+    "contact": "Contact"
+  },
+  "contact": {
+    "title": "Have questions or suggestions?",
+    "name": "Your name",
+    "email": "Email",
+    "telegram": "Telegram @username",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "SEND REQUEST",
+    "writeToBot": "Message us on Telegram Bot",
+    "errorFillAll": "Please fill out all fields",
+    "success": "Request sent ✅",
+    "submitError": "An error occurred while sending the form."
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "clients": "Eligible Client Types",
+    "services": "Our Services",
+    "about": "About Us",
+    "resources": "Resources",
+    "partners": "Partnership",
+    "rights": "ALL RIGHTS RESERVED"
+  },
+  "partnersMedia": {
+    "partnersTitle": "Our Partners",
+    "mediaTitle": "Media About Us"
+  },
+  "achievements": {
+    "title": "Our Achievements",
+    "team": "Our Team",
+    "month": {
+      "january": "January",
+      "february": "February",
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
+    },
+    "items": [
+      {
+        "label": "Client Audience",
+        "description": "Monthly users from Telegram",
+        "postfix": ""
+      },
+      {
+        "label": "Active Clients",
+        "description": "Monthly on a regular basis",
+        "postfix": ""
+      },
+      {
+        "label": "Ad Budget",
+        "description": "At $0.09 per user",
+        "postfix": "$"
+      },
+      {
+        "label": "Ad Reach",
+        "description": "Total campaign reach",
+        "postfix": ""
+      }
+    ]
+  },
+    "services": {
+      "title": "Our Services",
+      "items": [
+        {
+          "label": "Advertising",
+          "title": "Telegram Ads",
+          "description": "We launch and manage tens of thousands of ads in Telegram Ads. Any volume, paying audience, fast results."
+        },
+        {
+          "label": "Creatives",
+          "title": "Creatives",
+          "description": "We create unique copies tailored to your project and the channels where they will run. We use each channel’s slang for maximum conversion."
+        },
+        {
+          "label": "Analytics",
+          "title": "Analytics",
+          "description": "We track every user action and know who actually pays. From click to profit — we optimize campaigns for real ROI."
+        },
+        {
+          "label": "Scaling",
+          "title": "Scaling",
+          "description": "We scale traffic and take projects to the next level. From 10,000 to a million users — we make it happen."
+        }
+      ]
+    },  
+  "about": {
+    "title": "RA Agency — unlimited traffic",
+    "lines": [
+      "We play big.",
+      "Any project. Any market. Any volume.",
+      "RA Agency is a team that breaks the standard rules of Telegram Ads.",
+      "Leave your contact below — we’ll get back to you within 10 minutes and start driving high-quality, paying users today."
+    ]
+  }
+}
